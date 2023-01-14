@@ -1,0 +1,86 @@
+<div class="max-w-screen-md mx-auto p-md-4 text-white font-sans">
+  <section id="bottom-navigation"
+    class="block fixed inset-x-0 bottom-0 z-10 bg-black shadow border-t-2 border-[#282828] rounded-[24px]">
+    <div id="tabs" class="flex justify-between">
+      <!-- Inicio -->
+      <a routerLink="/home" [ngClass]="{'text-greenigth': this.navigationOption.selected === 'Inicio'}"
+        class="w-full justify-center inline-block text-center pt-3 pb-4">
+        <svg viewBox="0 0 42 42" class="inline-block mb-1 w-8 h-8">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path
+              d="M21.0847458,3.38674884 C17.8305085,7.08474576 17.8305085,10.7827427 21.0847458,14.4807396 C24.3389831,18.1787365 24.3389831,22.5701079 21.0847458,27.6548536 L21.0847458,42 L8.06779661,41.3066256 L6,38.5331279 L6,26.2681048 L6,17.2542373 L8.88135593,12.4006163 L21.0847458,2 L21.0847458,3.38674884 Z"
+              fill="currentColor" fill-opacity="0.1"></path>
+            <path
+              d="M11,8 L33,8 L11,8 Z M39,17 L39,36 C39,39.3137085 36.3137085,42 33,42 L11,42 C7.6862915,42 5,39.3137085 5,36 L5,17 L7,17 L7,36 C7,38.209139 8.790861,40 11,40 L33,40 C35.209139,40 37,38.209139 37,36 L37,17 L39,17 Z"
+              fill="currentColor"></path>
+            <path
+              d="M22,27 C25.3137085,27 28,29.6862915 28,33 L28,41 L16,41 L16,33 C16,29.6862915 18.6862915,27 22,27 Z"
+              stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"></path>
+            <rect fill="currentColor"
+              transform="translate(32.000000, 11.313708) scale(-1, 1) rotate(-45.000000) translate(-32.000000, -11.313708) "
+              x="17" y="10.3137085" width="30" height="2" rx="1"></rect>
+            <rect fill="currentColor"
+              transform="translate(12.000000, 11.313708) rotate(-45.000000) translate(-12.000000, -11.313708) " x="-3"
+              y="10.3137085" width="30" height="2" rx="1"></rect>
+          </g>
+        </svg>
+        <span class="tab tab-home block text-xs">Inicio</span>
+      </a>
+
+      <!-- Tienda -->
+      <a [ngClass]="{'text-greenigth': this.navigationOption.selected === 'Tienda'}" width="25" height="25"
+        *ngIf="this.navigationOption.type === 1" class="w-full justify-center inline-block text-center pt-3 pb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="inline-block mb-1 w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+        </svg>
+        <span class="tab tab-kategori block text-xs">Tienda</span>
+      </a>
+
+      <!-- Publicar -->
+      <a [ngClass]="{'text-greenigth': this.navigationOption.selected === 'Publicar'}"
+        class="w-full justify-center inline-block text-center pt-3 pb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="inline-block mb-1 w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="tab tab-explore block text-xs">Publicar</span>
+      </a>
+
+      <!-- Envíos -->
+      <a [ngClass]="{'text-greenigth': this.navigationOption.selected === 'Envíos'}"
+        class="w-full justify-center inline-block text-center pt-3 pb-4" *ngIf="this.navigationOption.type === 2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="inline-block mb-1 w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+        </svg>
+        <span class="tab tab-whishlist block text-xs">Envíos</span>
+      </a>
+
+      <!-- Carrito -->
+      <a [ngClass]="{'text-greenigth': this.navigationOption.selected === 'Carrito'}"
+        class="w-full justify-center inline-block text-center pt-3 pb-4" *ngIf="this.navigationOption.type === 1">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="inline-block mb-1 w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+        </svg>
+        <span class="tab tab-whishlist block text-xs">Carrito</span>
+      </a>
+
+      <!-- Perfil -->
+      <a routerLink="/profile" [ngClass]="{'text-greenigth': this.navigationOption.selected === 'Perfil'}"
+        class="w-full justify-center inline-block text-center pt-3 pb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="inline-block mb-1 w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+        </svg>
+
+        <span class="tab tab-account block text-xs">Perfil</span>
+      </a>
+    </div>
+  </section>
+</div>

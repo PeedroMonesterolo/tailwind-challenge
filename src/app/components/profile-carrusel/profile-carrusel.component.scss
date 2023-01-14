@@ -1,0 +1,12 @@
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.item-data {
+  background: rgba(20, 20, 20, 0.6);
+}

@@ -1,0 +1,19 @@
+<div *ngIf="type === 1" class="max-w-screen-md mx-auto p-4 gap-4 space-y-4 text-center">
+  <nav class="flex flex-row justify-around">
+    <button *ngFor="let item of this.tabs"
+      class="text-gray-600 items-center py-4 px-4 focus:outline-none border-b-2 font-medium  w-full text-center hover:text-indigo-500 hover:border-indigo-500"
+      [ngClass]="{'border-gray-600': !item.selected, 'border-indigo-500 text-indigo-700': item.selected}">
+      {{ item.name }}
+    </button>
+  </nav>
+</div>
+
+<div *ngIf="type === 2" class="max-w-screen-md mx-auto p-4 gap-4 space-y-4 text-center">
+  <nav class="flex flex-row justify-around">
+    <button *ngFor="let item of this.tabs"
+      class="border-gray-600 text-gray-500 items-center py-4 px-4 focus:outline-none border-b-2 font-medium  w-full text-center text-sm"
+      [ngClass]="{'font-bold text-gray-300': item.selected}">
+      {{ item.name }}
+    </button>
+  </nav>
+</div>

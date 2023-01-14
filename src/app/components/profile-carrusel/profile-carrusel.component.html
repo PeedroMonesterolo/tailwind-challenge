@@ -1,0 +1,58 @@
+<div class="max-w-screen-md mx-auto p-4 gap-4 text-white text-md">
+  <div class="flex">
+    <div class="flex-none">
+      <div class="items-center justify-center w-16 h-16 m-auto mr-4 sm:w-14 sm:h-14">
+        <img alt="profil"
+          src="https://logopond.com/logos/b5a5f31db425b343bb3aabe88dd58db0.png"
+          class="object-cover w-16 h-16 mx-auto rounded-full sm:w-14 sm:h-14 border-2" />
+      </div>
+    </div>
+    <div class="flex-auto w-64">
+      <div class="w-full">
+        <h2 class="font-semibold">54 Celsius</h2>
+        <p class="text-sm">184 seguidores</p>
+      </div>
+    </div>
+    <div class="flex-auto w-32 h-12 pt-1">
+      <app-button [textButton]="'seguir'"></app-button>
+    </div>
+  </div>
+
+  <div class="flex flex-col mt-4 p-auto">
+    <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+      <div class="flex flex-nowrap">
+
+        <div class="inline-block px-2" *ngFor="let item of [1,1,1,1]; let i=index">
+          <div
+            class="w-48 max-w-xs overflow-hidden rounded-lg shadow-md bg-transparent hover:shadow-xl transition-shadow duration-300 ease-in-out h-full">
+            <img
+            class="h-full"
+              src="https://www.agro.uba.ar/noticias/sites/default/files/images/b18e8d28-8bd4-46eb-b13d-20fa54120538.jpg" />
+            <div class="flex text-white relative bottom-12">
+              <div class="flex-auto item-data m-3 rounded-md">
+                <a class="flex m-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                  </svg>
+                  <span class="block">30.8k</span>
+                </a>
+              </div>
+              <div class="flex-auto item-data m-3 rounded-md">
+                <a class="flex m-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  </svg>
+                  <span class="block">90%</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
